@@ -1,0 +1,31 @@
+.saved-map {
+  @include flexPosition(flex-start, flex-start, row);
+  margin: 0 2rem;
+  gap: 2rem;
+}
+
+.savedLocations {
+  @include fullSpace(20%);
+  @include flexPosition(flex-start, flex-start, column);
+}
+
+.mapDisplay {
+  @include flexPosition(center, flex-start, row);
+  @include fullSpace(80%);
+  border: 1px solid orange;
+}
+
+.nearby {
+  @include flexPosition(flex-start, flex-start, column);
+  @include fullSpace;
+
+  &-card-wrapper {
+    @include flexPosition(center, flex-start, row);
+    @include fullSpace;
+  }
+
+  &-card {
+    border: 1px solid green;
+    @include flexPosition(flex-start, flex-start, column);
+  }
+}

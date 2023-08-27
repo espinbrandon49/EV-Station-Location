@@ -1,0 +1,19 @@
+.nearby {
+  &-card-wrapper {
+    gap: 10px;
+    // flex-wrap: wrap !important;
+  }
+
+  &-heading {
+    // padding: 1.5rem 0;
+    font-size: 3em;
+  }
+
+  &-card {
+    font-size: 1.25rem;
+    width: 200px;
+    // height: 200px;
+    // line-height: 3rem;
+    // padding: 5px;
+  }
+}

@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  /* html is set to 62.5% so that all REM measurements are based on 10px sizing. 1.5rem = 15px */
+  font-size: 62.5%; }
+
+html,
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 100%; }
+
+.none {
+  display: none; }
+
+ul {
+  list-style: none; }
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0; }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+
+.box {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  display: block; }
+
+a.box:hover, a.box:focus {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px #485fc7; }
+
+a.box:active {
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #485fc7; }
+
+.saved-map {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 2rem;
+  gap: 2rem; }
+
+.savedLocations {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.mapDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  height: 100%;
+  border: 1px solid orange; }
+
+.nearby {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%; }
+  .nearby-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%; }
+  .nearby-card {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+
+.searchEntry {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0; }
+  .searchEntry .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 3rem; }
+    @media only screen and (min-width: 768px) {
+      .searchEntry .logo {
+        font-size: 4rem; } }
+    .searchEntry .logo i {
+      color: #3cba54; }
+  .searchEntry .searchBar {
+    width: 90vw;
+    display: flex;
+    border: 2px solid #e6e6e6;
+    border-radius: 500px;
+    padding: 0.15rem 0.25rem 0.15rem 0.75rem; }
+    @media only screen and (min-width: 768px) {
+      .searchEntry .searchBar {
+        width: 80vw;
+        padding: 1.25rem 1.5rem; } }
+    @media only screen and (min-width: 1025px) {
+      .searchEntry .searchBar {
+        width: 60vw; } }
+    .searchEntry .searchBar:hover, .searchEntry .searchBar:focus-within {
+      box-shadow: 0 2px 5px #e6e6e6; }
+    .searchEntry .searchBar input[type="text"] {
+      flex-grow: 1;
+      font-size: 0.75rem;
+      text-align: left;
+      letter-spacing: 0.1rem;
+      border: 0;
+      outline: none;
+      min-width: 150px; }
+      @media only screen and (min-width: 768px) {
+        .searchEntry .searchBar input[type="text"] {
+          font-size: 1.25rem; } }
+    .searchEntry .searchBar .button {
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      min-width: 48px;
+      min-height: 48px;
+      outline: none; }
+      .searchEntry .searchBar .button i {
+        font-family: "Font Awesome 5 Free";
+        font-size: 1rem; }
+        @media only screen and (min-width: 768px) {
+          .searchEntry .searchBar .button i {
+            font-size: 1.5rem; } }
+      .searchEntry .searchBar .button .blue {
+        color: #4885ed; }
+    @media only screen and (min-width: 768px) {
+      .searchEntry .searchBar .searchButton {
+        padding-left: 1rem; } }
+    .searchEntry .searchBar .searchButton:hover i, .searchEntry .searchBar .searchButton:focus i {
+      color: #3cba54; }
+    .searchEntry .searchBar .clear {
+      justify-content: center;
+      align-items: center;
+      color: #70757a;
+      border-right: thin solid #d9d9d9; }
+      @media only screen and (min-width: 768px) {
+        .searchEntry .searchBar .clear {
+          padding-left: 0 1rem; } }
+      .searchEntry .searchBar .clear:hover i, .searchEntry .searchBar .clear:focus i {
+        color: #db3236; }
+
+.savedLocations {
+  font-size: 1.25em; }
+  .savedLocations li:last-child {
+    border-bottom: 0.1em solid #70757a !important;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px; }
+  .savedLocations li:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px; }
+  .savedLocations-item {
+    border: 0.1em solid #70757a;
+    width: 100%;
+    padding: 10px;
+    border-bottom: none; }
+
+.nearby-card-wrapper {
+  gap: 10px; }
+
+.nearby-heading {
+  font-size: 3em; }
+
+.nearby-card {
+  font-size: 1.25rem;
+  width: 200px; }

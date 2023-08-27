@@ -1,0 +1,103 @@
+.searchEntry {
+  @include flexPosition(flex-start, center, column);
+  padding: 40px 0;
+  // margin-bottom: 15rem;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 3rem;
+    @include mq(768px) {
+      font-size: 4rem;
+    }
+
+    i {
+      color: $logo-green;
+    }
+  }
+
+  .searchBar {
+    width: 90vw;
+    display: flex;
+    border: 2px solid $search-bar-border;
+    border-radius: 500px;
+    padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+    @include mq(768px) {
+      width: 80vw;
+      padding: 1.25rem 1.5rem;
+    }
+    @include mq(1025px) {
+      width: 60vw;
+    }
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 2px 5px $search-bar-border;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      font-size: 0.75rem;
+      text-align: left;
+      letter-spacing: 0.1rem;
+      border: 0;
+      outline: none;
+      min-width: 150px;
+      @include mq(768px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .button {
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      min-width: 48px;
+      min-height: 48px;
+      outline: none;
+
+      i {
+        font-family: "Font Awesome 5 Free";
+        font-size: 1rem;
+        @include mq(768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .blue {
+        color: $logo-blue;
+      }
+    }
+
+    .searchButton {
+      @include mq(768px) {
+        padding-left: 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        i {
+          color: $logo-green;
+        }
+      }
+    }
+
+    .clear {
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $stats-color;
+      border-right: thin solid $clear-button-color;
+      @include mq(768px) {
+        padding-left: 0 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        i {
+          color: $logo-red;
+        }
+      }
+    }
+  }
+}
