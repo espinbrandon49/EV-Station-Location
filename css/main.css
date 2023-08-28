@@ -9,12 +9,11 @@ html {
   font-size: 62.5%;
   max-width: 1200px;
   height: 100%;
-  border: 1px solid green;
   margin: 0 auto; }
 
 html,
 body {
-  background-color: #fff;
+  background-color: #FBFBFB;
   color: #222;
   font-family: "Raleway", sans-serif; }
 
@@ -33,8 +32,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
+  margin: 1.5rem 0 1.5rem 3rem; }
 
 .box {
   background-color: white;
@@ -72,8 +70,7 @@ a.box:active {
     height: 100%; }
   .mapDisplay-map {
     width: 70%;
-    height: 100%;
-    border: 1px solid green; }
+    height: 100%; }
 
 .nearby {
   display: flex;
@@ -101,7 +98,7 @@ a.box:active {
     font-size: 2rem;
     font-weight: 700;
     padding: 3rem; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 768px) {
       .searchEntry .logo {
         font-size: 4rem; } }
     .searchEntry .logo i {
@@ -112,24 +109,24 @@ a.box:active {
     border: 2px solid #e6e6e6;
     border-radius: 500px;
     padding: 0.15rem 0.25rem 0.15rem 0.75rem; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 768px) {
       .searchEntry .searchBar {
         width: 80vw;
         padding: 1.25rem 1.5rem; } }
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (max-width: 1025px) {
       .searchEntry .searchBar {
         width: 60vw; } }
     .searchEntry .searchBar:hover, .searchEntry .searchBar:focus-within {
       box-shadow: 0 2px 5px #e6e6e6; }
     .searchEntry .searchBar input[type="text"] {
       flex-grow: 1;
-      font-size: 0.75rem;
+      font-size: 2rem;
       text-align: left;
       letter-spacing: 0.1rem;
       border: 0;
       outline: none;
       min-width: 150px; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (max-width: 768px) {
         .searchEntry .searchBar input[type="text"] {
           font-size: 1.25rem; } }
     .searchEntry .searchBar .button {
@@ -142,12 +139,12 @@ a.box:active {
       .searchEntry .searchBar .button i {
         font-family: "Font Awesome 5 Free";
         font-size: 1rem; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (max-width: 768px) {
           .searchEntry .searchBar .button i {
             font-size: 1.5rem; } }
       .searchEntry .searchBar .button .blue {
         color: #4885ed; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 768px) {
       .searchEntry .searchBar .searchButton {
         padding-left: 1rem; } }
     .searchEntry .searchBar .searchButton:hover i, .searchEntry .searchBar .searchButton:focus i {
@@ -157,14 +154,17 @@ a.box:active {
       align-items: center;
       color: #70757a;
       border-right: thin solid #d9d9d9; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (max-width: 768px) {
         .searchEntry .searchBar .clear {
           padding-left: 0 1rem; } }
       .searchEntry .searchBar .clear:hover i, .searchEntry .searchBar .clear:focus i {
         color: #db3236; }
 
 .savedLocations {
-  font-size: 1.25em; }
+  font-size: 1.5em; }
+  @media only screen and (max-width: 920px) {
+    .savedLocations {
+      color: blue; } }
   .savedLocations li:last-child {
     border-bottom: 0.1em solid #e6e6e6;
     border-bottom-left-radius: 6px;
@@ -187,10 +187,12 @@ a.box:active {
   flex-wrap: wrap !important; }
 
 .nearby-card {
-  border: 2px solid #e6e6e6;
+  border: 2px solid #3cba54;
+  background-color: #3cba54;
   border-radius: 6px;
   max-width: 200px;
-  height: 250px; }
+  height: 250px;
+  color: #fff; }
   .nearby-card-name {
     font-size: 1.75rem !important;
     font-weight: 700; }
@@ -208,6 +210,9 @@ a.box:active {
       font-size: 2rem;
       overflow-wrap: break-word;
       font-weight: 700; }
+      @media only screen and (max-width: 920px) {
+        .mapDisplay-card-name {
+          font-size: 1.5rem; } }
     .mapDisplay-card-item {
       padding: 1rem; }
 

@@ -9,10 +9,8 @@
 html {
   /* html is set to 62.5% so that all REM measurements are based on 10px sizing. 1.5rem = 15px */
   font-size: 62.5%;
-  // @include fullSpace(1200px);
   max-width: 1200px;
   height: 100%;
-  border: 1px solid green;
   margin: 0 auto;
 }
 
@@ -23,10 +21,6 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.body {
-  // @include fullSpace;
-  //  border: 1px solid green;
-}
 .none {
   display: none;
 }
@@ -44,5 +38,4 @@ ul ol,
 ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
 }

@@ -10,10 +10,12 @@
   }
 
   &-card {
-    border: 2px solid $search-bar-border;
+    border: 2px solid $logo-green;
+    background-color: $logo-green;
     border-radius: 6px;
     max-width: 200px;
     height: 250px;
+    color: #fff;
 
     &-name {
       font-size: 1.75rem !important;

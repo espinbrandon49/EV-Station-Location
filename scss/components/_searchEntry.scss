@@ -37,7 +37,8 @@
 
     input[type="text"] {
       flex-grow: 1;
-      font-size: 0.75rem;
+      // font-size: 0.75rem;
+      font-size: 2rem;
       text-align: left;
       letter-spacing: 0.1rem;
       border: 0;
@@ -83,7 +84,7 @@
     }
 
     .clear {
-      // display: flex;
+      //  the x becomes centered programattically when you input text, after you connect the JavaScript.
       justify-content: center;
       align-items: center;
       color: $stats-color;
