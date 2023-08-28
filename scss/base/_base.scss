@@ -9,6 +9,11 @@
 html {
   /* html is set to 62.5% so that all REM measurements are based on 10px sizing. 1.5rem = 15px */
   font-size: 62.5%;
+  // @include fullSpace(1200px);
+  max-width: 1200px;
+  height: 100%;
+  border: 1px solid green;
+  margin: 0 auto;
 }
 
 html,
@@ -16,9 +21,12 @@ body {
   background-color: $background-color;
   color: $font-color;
   font-family: "Raleway", sans-serif;
-  @include fullSpace;
 }
 
+.body {
+  // @include fullSpace;
+  //  border: 1px solid green;
+}
 .none {
   display: none;
 }

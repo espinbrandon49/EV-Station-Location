@@ -1,19 +1,29 @@
 .nearby {
-  &-card-wrapper {
-    gap: 10px;
-    // flex-wrap: wrap !important;
+  &-heading {
+    font-size: 3em;
+    padding: 0.5em 0 0.25em 1em;
   }
 
-  &-heading {
-    // padding: 1.5rem 0;
-    font-size: 3em;
+  &-card-wrapper {
+    gap: 10px;
+    flex-wrap: wrap !important;
   }
 
   &-card {
-    font-size: 1.25rem;
-    width: 200px;
-    // height: 200px;
-    // line-height: 3rem;
-    // padding: 5px;
+    border: 2px solid $search-bar-border;
+    border-radius: 6px;
+    max-width: 200px;
+    height: 250px;
+
+    &-name {
+      font-size: 1.75rem !important;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 10px;
+    }
   }
 }

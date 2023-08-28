@@ -2,7 +2,7 @@
   font-size: 1.25em;
 
   & li:last-child {
-    border-bottom: 0.1em solid $stats-color !important;
+    border-bottom: 0.1em solid $search-bar-border;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
   }
@@ -13,7 +13,7 @@
   }
 
   &-item {
-    border: 0.1em solid $stats-color;
+    border: 0.1em solid $search-bar-border;
     width: 100%;
     padding: 10px;
     border-bottom: none;
