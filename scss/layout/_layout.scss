@@ -1,5 +1,6 @@
 .searchEntry {
   @include flexPosition(center, center, column);
+  // width: 90%;
 }
 
 .saved-map {

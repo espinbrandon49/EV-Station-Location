@@ -7,7 +7,6 @@
 html {
   /* html is set to 62.5% so that all REM measurements are based on 10px sizing. 1.5rem = 15px */
   font-size: 62.5%;
-  max-width: 1200px;
   height: 100%;
   margin: 0 auto; }
 
@@ -15,7 +14,8 @@ html,
 body {
   background-color: #FBFBFB;
   color: #222;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  max-width: 1200px; }
 
 .none {
   display: none; }
@@ -104,7 +104,7 @@ a.box:active {
     .searchEntry .logo i {
       color: #3cba54; }
   .searchEntry .searchBar {
-    width: 90vw;
+    width: 90%;
     display: flex;
     border: 2px solid #e6e6e6;
     border-radius: 500px;
