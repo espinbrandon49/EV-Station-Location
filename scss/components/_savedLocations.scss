@@ -1,8 +1,5 @@
 .savedLocations {
   font-size: 1.5em;
-      @include mq(920px) {
-      color: blue;
-    }
 
   & li:last-child {
     border-bottom: 0.1em solid $search-bar-border;
@@ -20,5 +17,53 @@
     width: 100%;
     padding: 10px;
     border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .saved-map {
+    flex-direction: column-reverse !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .savedLocations {
+    @include flexPosition(center, center, column);
+    @include fullSpace(90%);
+    padding: 10px 0;
+    max-width: 90vw !important;
+    margin-top: 40px;
+    &-item {
+      width: 200px;
+    }
+  }
+
+  .mapDisplay {
+    @include flexPosition(center, center, column);
+    @include fullSpace;
+
+    &-card {
+      // border: 1px solid green;
+      @include flexPosition(center, center, column);
+      @include fullSpace(90%);
+      // margin: 10px 0;
+      // border: 0.1em solid $search-bar-border;
+
+      &-item {
+        // border: 1px solid orange;
+        @include fullSpace;
+        text-align: center;
+      }
+
+      &-stats {
+        @include flexPosition;
+      }
+    }
+
+    &-map {
+      border: 1px solid green;
+      @include fullSpace;
+    }
   }
 }

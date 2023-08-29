@@ -4,7 +4,7 @@
   // margin-bottom: 15rem;
 
   .logo {
-    font-size: 2rem;
+    font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;;
     font-weight: 700;
     padding: 3rem;
     @include mq(768px) {
@@ -21,7 +21,8 @@
     display: flex;
     border: 2px solid $search-bar-border;
     border-radius: 500px;
-    padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+    // padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+    padding: 3rem 1.5rem 3rem 1.5rem;
     @include mq(768px) {
       width: 80vw;
       padding: 1.25rem 1.5rem;
@@ -59,7 +60,7 @@
 
       i {
         font-family: "Font Awesome 5 Free";
-        font-size: 1rem;
+        font-size: 3rem;
         @include mq(768px) {
           font-size: 1.5rem;
         }

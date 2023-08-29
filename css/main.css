@@ -95,7 +95,9 @@ a.box:active {
 .searchEntry {
   padding: 40px 0; }
   .searchEntry .logo {
-    font-size: 2rem;
+    font-size: 4.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
     font-weight: 700;
     padding: 3rem; }
     @media only screen and (max-width: 768px) {
@@ -108,7 +110,7 @@ a.box:active {
     display: flex;
     border: 2px solid #e6e6e6;
     border-radius: 500px;
-    padding: 0.15rem 0.25rem 0.15rem 0.75rem; }
+    padding: 3rem 1.5rem 3rem 1.5rem; }
     @media only screen and (max-width: 768px) {
       .searchEntry .searchBar {
         width: 80vw;
@@ -138,7 +140,7 @@ a.box:active {
       outline: none; }
       .searchEntry .searchBar .button i {
         font-family: "Font Awesome 5 Free";
-        font-size: 1rem; }
+        font-size: 3rem; }
         @media only screen and (max-width: 768px) {
           .searchEntry .searchBar .button i {
             font-size: 1.5rem; } }
@@ -162,9 +164,6 @@ a.box:active {
 
 .savedLocations {
   font-size: 1.5em; }
-  @media only screen and (max-width: 920px) {
-    .savedLocations {
-      color: blue; } }
   .savedLocations li:last-child {
     border-bottom: 0.1em solid #e6e6e6;
     border-bottom-left-radius: 6px;
@@ -178,28 +177,73 @@ a.box:active {
     padding: 10px;
     border-bottom: none; }
 
-.nearby-heading {
-  font-size: 3em;
-  padding: 0.5em 0 0.25em 1em; }
+@media screen and (max-width: 550px) {
+  .saved-map {
+    flex-direction: column-reverse !important;
+    justify-content: center;
+    align-items: center; }
+  .savedLocations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    padding: 10px 0;
+    max-width: 90vw !important;
+    margin-top: 40px; }
+    .savedLocations-item {
+      width: 200px; }
+  .mapDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+    .mapDisplay-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      height: 100%; }
+      .mapDisplay-card-item {
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+      .mapDisplay-card-stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+    .mapDisplay-map {
+      border: 1px solid green;
+      width: 100%;
+      height: 100%; } }
 
-.nearby-card-wrapper {
-  gap: 10px;
-  flex-wrap: wrap !important; }
-
-.nearby-card {
-  border: 2px solid #3cba54;
-  background-color: #3cba54;
-  border-radius: 6px;
-  max-width: 200px;
-  height: 250px;
-  color: #fff; }
-  .nearby-card-name {
-    font-size: 1.75rem !important;
-    font-weight: 700; }
-  .nearby-card p {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding: 10px; }
+.nearby {
+  padding: 40px 0; }
+  .nearby-heading {
+    font-size: 3em;
+    padding: 0.5em 0 0.25em 1em; }
+  .nearby-card-wrapper {
+    gap: 10px;
+    flex-wrap: wrap !important; }
+  .nearby-card {
+    border: 2px solid #3cba54;
+    background-color: #3cba54;
+    border-radius: 6px;
+    max-width: 200px;
+    height: 250px;
+    color: #fff; }
+    .nearby-card-name {
+      font-size: 1.75rem !important;
+      font-weight: 700; }
+    .nearby-card p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 10px; }
 
 .mapDisplay {
   border-bottom: 0.1em solid #e6e6e6; }
