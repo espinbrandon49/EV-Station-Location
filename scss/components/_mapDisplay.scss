@@ -25,5 +25,7 @@
 }
 
 .map {
-  @include fullSpace;
+  // @include fullSpace;
+  width: 100%;
+  height: 50vh;
 }
