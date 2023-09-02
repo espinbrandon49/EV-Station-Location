@@ -5,6 +5,7 @@
 ## Description 
 An application created collaboratively with an interactive front-end that allows users to geolocate electric vehicle charging stations in a specified region using a city name or zipcode and also view the location's retail information.  
 
+* Deployed Link: [https://espinbrandon49.github.io/EV-Station-Locator/](https://espinbrandon49.github.io/EV-Station-Locator/)
 * Deployed Link: [https://espinbrandon49.github.io/EV-Charging-Station-Locator/](https://espinbrandon49.github.io/EV-Station-Locator/)
 * [GitHub repository](https://github.com/espinbrandon49/EV-Station-Locator)
 
@@ -26,7 +27,7 @@ An application created collaboratively with an interactive front-end that allows
   
 ## Installation
 * Runs in the browser
-* Deployed Link: [https://espinbrandon49.github.io/EV-Charging-Station-Locator/](https://espinbrandon49.github.io/EV-Station-Locator//)
+* Deployed Link: [https://espinbrandon49.github.io/EV-Charging-Station-Locator/](https://espinbrandon49.github.io/EV-Charging-Station-Locator/)
 
 ## Usage 
 There are 3 ways to locate a charging station!
