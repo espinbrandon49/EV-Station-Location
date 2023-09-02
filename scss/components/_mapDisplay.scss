@@ -1,5 +1,5 @@
 .mapDisplay {
-  border-bottom: 0.1em solid $search-bar-border;
+  border: 0.1em solid $search-bar-border;
 
   &-card {
     font-size: 1.5rem;
@@ -17,9 +17,13 @@
     &-item {
       padding: 1rem;
     }
+
+    &-stats {
+      line-height: 2rem;
+    }
   }
 }
 
 .map {
-  width: 100%;
+  @include fullSpace;
 }

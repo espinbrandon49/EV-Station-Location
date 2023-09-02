@@ -1,13 +1,15 @@
 body footer {
   text-align: center;
   padding-top: 37px;
+  padding-bottom: 2em;
 
   a {
     text-decoration: none;
     color: $search-bar-border;
+    transition: .3s;
 
     &:hover {
-      color: #afafaf;
+      color: $footer-hover;
       font-size: 105%;
     }
   }

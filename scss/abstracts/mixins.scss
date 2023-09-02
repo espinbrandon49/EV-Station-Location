@@ -1,23 +1,14 @@
-// save for future use
 @mixin fullSpace($width: 100%) {
   width: $width;
   height: 100%;
 }
 
-// save for future use
 @mixin flexPosition($justCont: center, $alignIte: center, $flexDir: row) {
   display: flex;
   flex-direction: $flexDir;
   justify-content: $justCont;
   align-items: $alignIte;
 }
-
-// save for future use
-// @mixin mq($size) {
-//   @media only screen and (min-width: $size) {
-//     @content;
-//   }
-// }
 
 @mixin mq($size) {
   @media only screen and (max-width: $size) {

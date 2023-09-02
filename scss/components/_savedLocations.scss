@@ -12,58 +12,37 @@
     border-top-right-radius: 6px;
   }
 
-  &-item {
+  &-div {
+    @include flexPosition;
     border: 0.1em solid $search-bar-border;
+    border-bottom: none;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $search-bar-border;
+      cursor: pointer;
+    }
+  }
+
+  &-item {
     width: 100%;
     padding: 10px;
-    border-bottom: none;
-  }
-}
+    transition: all 0.3s;
 
-@media screen and (max-width: 550px) {
-
-  .saved-map {
-    flex-direction: column-reverse !important;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .savedLocations {
-    @include flexPosition(center, center, column);
-    @include fullSpace(90%);
-    padding: 10px 0;
-    max-width: 90vw !important;
-    margin-top: 40px;
-    &-item {
-      width: 200px;
+    &-zip {
+      color: darken($search-bar-border, 20%);
+      font-size: 1.25rem;
     }
   }
 
-  .mapDisplay {
-    @include flexPosition(center, center, column);
-    @include fullSpace;
+  .x {
+    padding-right: 10px;
+    color: $logo-red;
+    aspect-ratio: 1;
+    transition: all 0.3s;
 
-    &-card {
-      // border: 1px solid green;
-      @include flexPosition(center, center, column);
-      @include fullSpace(90%);
-      // margin: 10px 0;
-      // border: 0.1em solid $search-bar-border;
-
-      &-item {
-        // border: 1px solid orange;
-        @include fullSpace;
-        text-align: center;
-      }
-
-      &-stats {
-        @include flexPosition;
-      }
-    }
-
-    &-map {
-      border: 1px solid green;
-      @include fullSpace;
+    &:hover {
+      color: lighten($logo-red, 20%);
     }
   }
 }

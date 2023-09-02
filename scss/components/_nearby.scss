@@ -3,21 +3,22 @@
 
   &-heading {
     font-size: 3em;
-    padding: 0.5em 0 0.25em 1em;
+    padding: 0.5em 0 0.5em 1em;
   }
 
   &-card-wrapper {
     gap: 10px;
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
   }
 
   &-card {
     border: 2px solid $logo-green;
     background-color: $logo-green;
     border-radius: 6px;
+    min-width: 200px;
     max-width: 200px;
     height: 250px;
-    color: #fff;
+    color: $second-font-color;
 
     &-name {
       font-size: 1.75rem !important;
@@ -28,6 +29,12 @@
       font-size: 1.5rem;
       line-height: 2rem;
       padding: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($logo-green, 10%);
+
     }
   }
 }

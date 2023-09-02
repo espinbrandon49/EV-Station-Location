@@ -1,16 +1,16 @@
 .searchEntry {
   @include flexPosition(center, center, column);
-  // width: 90%;
 }
 
 .saved-map {
   border-radius: 6px;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .savedLocations {
   @include fullSpace(15%);
+  margin-left: 1.5rem;
 }
 
 .mapDisplay {

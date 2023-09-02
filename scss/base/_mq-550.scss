@@ -1,0 +1,42 @@
+@media screen and (max-width: 550px) {
+  .saved-map {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .savedLocations {
+    @include flexPosition(center, center, column);
+    @include fullSpace(90%);
+    padding: 10px 0;
+    max-width: 90vw;
+    margin-top: 40px;
+    &-item {
+      width: 200px;
+    }
+  }
+
+  .mapDisplay {
+    @include flexPosition(center, center, column);
+    @include fullSpace;
+
+    &-card {
+      @include flexPosition(center, center, column);
+      @include fullSpace(90%);
+    
+      &-item {
+        @include fullSpace;
+        text-align: center;
+      }
+
+      &-stats {
+        @include flexPosition;
+      }
+    }
+
+    &-map {
+      border: 1px solid green;
+      @include fullSpace;
+    }
+  }
+}

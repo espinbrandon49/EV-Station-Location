@@ -1,14 +1,17 @@
 .searchEntry {
-  // @include flexPosition(flex-start, center, column);
   padding: 40px 0;
-  // margin-bottom: 15rem;
 
   .logo {
-    font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;;
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
     font-weight: 700;
     padding: 3rem;
     @include mq(768px) {
       font-size: 4rem;
+    }
+    @include mq(400px) {
+      font-size: 3rem;
     }
 
     i {
@@ -21,14 +24,18 @@
     display: flex;
     border: 2px solid $search-bar-border;
     border-radius: 500px;
-    // padding: 0.15rem 0.25rem 0.15rem 0.75rem;
-    padding: 3rem 1.5rem 3rem 1.5rem;
+    padding: 1.75rem 1.5rem 1.75rem 1.5rem;
+    // @include mq(1025px) {
+    //   width: 60vw;
+    // }
+
     @include mq(768px) {
       width: 80vw;
       padding: 1.25rem 1.5rem;
     }
-    @include mq(1025px) {
-      width: 60vw;
+
+    @include mq(400px) {
+      width: 95vw;
     }
 
     &:hover,
@@ -38,7 +45,6 @@
 
     input[type="text"] {
       flex-grow: 1;
-      // font-size: 0.75rem;
       font-size: 2rem;
       text-align: left;
       letter-spacing: 0.1rem;
@@ -86,6 +92,7 @@
 
     .clear {
       //  the x becomes centered programattically when you input text, after you connect the JavaScript.
+  
       justify-content: center;
       align-items: center;
       color: $stats-color;

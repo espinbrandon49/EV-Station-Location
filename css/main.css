@@ -34,6 +34,12 @@ ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem; }
 
+.flex {
+  display: flex; }
+
+.green {
+  color: #3cba54; }
+
 .box {
   background-color: white;
   border-radius: 6px;
@@ -55,11 +61,12 @@ a.box:active {
 .saved-map {
   border-radius: 6px;
   display: flex;
-  gap: 2rem; }
+  gap: 1.5rem; }
 
 .savedLocations {
   width: 15%;
-  height: 100%; }
+  height: 100%;
+  margin-left: 1.5rem; }
 
 .mapDisplay {
   display: flex;
@@ -95,14 +102,17 @@ a.box:active {
 .searchEntry {
   padding: 40px 0; }
   .searchEntry .logo {
-    font-size: 4.0rem;
+    font-size: 4rem;
     line-height: 1.2;
-    letter-spacing: -.1rem;
+    letter-spacing: -0.1rem;
     font-weight: 700;
     padding: 3rem; }
     @media only screen and (max-width: 768px) {
       .searchEntry .logo {
         font-size: 4rem; } }
+    @media only screen and (max-width: 400px) {
+      .searchEntry .logo {
+        font-size: 3rem; } }
     .searchEntry .logo i {
       color: #3cba54; }
   .searchEntry .searchBar {
@@ -110,14 +120,14 @@ a.box:active {
     display: flex;
     border: 2px solid #e6e6e6;
     border-radius: 500px;
-    padding: 3rem 1.5rem 3rem 1.5rem; }
+    padding: 1.75rem 1.5rem 1.75rem 1.5rem; }
     @media only screen and (max-width: 768px) {
       .searchEntry .searchBar {
         width: 80vw;
         padding: 1.25rem 1.5rem; } }
-    @media only screen and (max-width: 1025px) {
+    @media only screen and (max-width: 400px) {
       .searchEntry .searchBar {
-        width: 60vw; } }
+        width: 95vw; } }
     .searchEntry .searchBar:hover, .searchEntry .searchBar:focus-within {
       box-shadow: 0 2px 5px #e6e6e6; }
     .searchEntry .searchBar input[type="text"] {
@@ -171,15 +181,95 @@ a.box:active {
   .savedLocations li:first-child {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px; }
-  .savedLocations-item {
+  .savedLocations-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     border: 0.1em solid #e6e6e6;
+    border-bottom: none;
+    transition: all 0.3s; }
+    .savedLocations-div:hover {
+      background-color: #e6e6e6;
+      cursor: pointer; }
+  .savedLocations-item {
     width: 100%;
     padding: 10px;
-    border-bottom: none; }
+    transition: all 0.3s; }
+    .savedLocations-item-zip {
+      color: #b3b3b3;
+      font-size: 1.25rem; }
+  .savedLocations .x {
+    padding-right: 10px;
+    color: #db3236;
+    aspect-ratio: 1;
+    transition: all 0.3s; }
+    .savedLocations .x:hover {
+      color: #ea898b; }
+
+.nearby {
+  padding: 40px 0; }
+  .nearby-heading {
+    font-size: 3em;
+    padding: 0.5em 0 0.5em 1em; }
+  .nearby-card-wrapper {
+    gap: 10px;
+    flex-wrap: wrap; }
+  .nearby-card {
+    border: 2px solid #3cba54;
+    background-color: #3cba54;
+    border-radius: 6px;
+    min-width: 200px;
+    max-width: 200px;
+    height: 250px;
+    color: #fff; }
+    .nearby-card-name {
+      font-size: 1.75rem !important;
+      font-weight: 700; }
+    .nearby-card p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 10px; }
+    .nearby-card:hover {
+      cursor: pointer;
+      background-color: #5ecb73; }
+
+.mapDisplay {
+  border: 0.1em solid #e6e6e6; }
+  .mapDisplay-card {
+    font-size: 1.5rem;
+    padding: 10px; }
+    .mapDisplay-card-name {
+      font-size: 2rem;
+      overflow-wrap: break-word;
+      font-weight: 700; }
+      @media only screen and (max-width: 920px) {
+        .mapDisplay-card-name {
+          font-size: 1.5rem; } }
+    .mapDisplay-card-item {
+      padding: 1rem; }
+    .mapDisplay-card-stats {
+      line-height: 2rem; }
+
+.map {
+  width: 100%;
+  height: 100%; }
+
+body footer {
+  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 2em; }
+  body footer a {
+    text-decoration: none;
+    color: #e6e6e6;
+    transition: .3s; }
+    body footer a:hover {
+      color: #afafaf;
+      font-size: 105%; }
 
 @media screen and (max-width: 550px) {
   .saved-map {
-    flex-direction: column-reverse !important;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center; }
   .savedLocations {
@@ -190,7 +280,7 @@ a.box:active {
     width: 90%;
     height: 100%;
     padding: 10px 0;
-    max-width: 90vw !important;
+    max-width: 90vw;
     margin-top: 40px; }
     .savedLocations-item {
       width: 200px; }
@@ -221,54 +311,3 @@ a.box:active {
       border: 1px solid green;
       width: 100%;
       height: 100%; } }
-
-.nearby {
-  padding: 40px 0; }
-  .nearby-heading {
-    font-size: 3em;
-    padding: 0.5em 0 0.25em 1em; }
-  .nearby-card-wrapper {
-    gap: 10px;
-    flex-wrap: wrap !important; }
-  .nearby-card {
-    border: 2px solid #3cba54;
-    background-color: #3cba54;
-    border-radius: 6px;
-    max-width: 200px;
-    height: 250px;
-    color: #fff; }
-    .nearby-card-name {
-      font-size: 1.75rem !important;
-      font-weight: 700; }
-    .nearby-card p {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      padding: 10px; }
-
-.mapDisplay {
-  border-bottom: 0.1em solid #e6e6e6; }
-  .mapDisplay-card {
-    font-size: 1.5rem;
-    padding: 10px; }
-    .mapDisplay-card-name {
-      font-size: 2rem;
-      overflow-wrap: break-word;
-      font-weight: 700; }
-      @media only screen and (max-width: 920px) {
-        .mapDisplay-card-name {
-          font-size: 1.5rem; } }
-    .mapDisplay-card-item {
-      padding: 1rem; }
-
-.map {
-  width: 100%; }
-
-body footer {
-  text-align: center;
-  padding-top: 37px; }
-  body footer a {
-    text-decoration: none;
-    color: #e6e6e6; }
-    body footer a:hover {
-      color: #afafaf;
-      font-size: 105%; }
