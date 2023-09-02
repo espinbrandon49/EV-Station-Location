@@ -1,17 +1,17 @@
-# Electric Vehichle Station Locator
+# Electric Vehicle Station Locator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
 ## Description 
-An application created collaboratively with an interactive front-end that allows users to geolocate electric charging stations by cityname or zipcode and also see the locations retail information.  
-
-Retail information displayed: location name, distance, address, phone number, charging port, price
-
-### Tools:
- - HTML, CSS, Bulma, JavaScript, LeafletJS, Web API, fetch API, local storage 
+An application created collaboratively with an interactive front-end that allows users to geolocate electric vehicle charging stations in a specified region using a city name or zipcode and also view the location's retail information.  
 
 * Deployed Link: [https://espinbrandon49.github.io/EV-Charging-Station-Locator/](https://espinbrandon49.github.io/EV-Charging-Station-Locator/)
 * [GitHub repository](https://github.com/espinbrandon49/EV-Charging-Station-Locator)
+
+### Technologies:
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![LEAFLET](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)
+
+
 
 ### Contributors
 * Brandon Espinosa - espinbrandon49
@@ -26,26 +26,18 @@ Retail information displayed: location name, distance, address, phone number, ch
   * [Questions](#questions)
   
 ## Installation
-### Browser
 * Runs in the browser
 * Deployed Link: [https://espinbrandon49.github.io/EV-Charging-Station-Locator/](https://espinbrandon49.github.io/EV-Charging-Station-Locator/)
 
-### Clone
-Clone the repository
-```bash
-git clone git@github.com:DNA601/EV-Charging-Station-Locator.git
-```
-
 ## Usage 
-* View a search using the search bar by entering a cityname or zipcode
-* View a saved search from previous searches
-* View nearby searches 
-* Selected search is viewed in the main window
-* Previous searches are clickable to be selected
-* See markers to navigate to any of 5 nearby locations, also clickable so that you have options
-* Retail information displayed: location name, distance, address, phone number, charging port, price
+There are 3 ways to locate a charging station!
+1. View a search using the search bar by entering a city name or zipcode.
+2. Use the saved searches buttons to view previous searches (persisted in local storage) 
+3. Click on one of the five nearby location tiles
 
-![usage video](./assets/images/power-locator.gif)
+See markers on the leaflet.js map display to navigate to your search location
+
+![usage video](./assets/images/EV%20Station%20Locator.gif)
 
 ## License 
 ### MIT License 
@@ -59,4 +51,4 @@ The content of this application is licensed under the MIT License.
 
 ## Questions 
 
-Contact me by [E-mail](mailto:espinbrandon49@gmail.com) or [GitHub](https://github.com/espinbrandon49)
+Feel free to contact me by [E-mail](mailto:espinbrandon49@gmail.com) or [GitHub](https://github.com/espinbrandon49)
