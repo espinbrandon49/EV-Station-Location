@@ -1,0 +1,29 @@
+* {
+  border-radius: 0 !important;
+}
+
+html {
+  background-color: hsl(0, 0%, 96%);
+}
+
+.fontColor {
+  color: #4a4a4a'
+}
+.price {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.iconDiv {
+  padding: 1em;
+}
+
+button {
+  border: none !important;
+}
+
+.stationInfo {
+  width: 20rem;
+}

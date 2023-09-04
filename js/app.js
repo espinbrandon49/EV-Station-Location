@@ -17,79 +17,67 @@ searchButton.addEventListener('click', (e) => {
 
 //1. Display data from search bar
 // https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/nearest/
-function getApi(location) {
+async function getApi(location) {
   const requestUrl = `https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=${location}&fuel_type_code='ELEC'&radius=5.0&api_key=${apikey}`
 
-  fetch(requestUrl)
-    .then(function (response) {
-      if (!response.ok) {
-        search.value = `INVALID CITY OR ZIPCODE`
-        search.setAttribute('style', 'color: red;')
-      }
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      let planes = [
-        [data.fuel_stations[0].latitude, data.fuel_stations[0].longitude],
-        [data.fuel_stations[1].latitude, data.fuel_stations[1].longitude],
-        [data.fuel_stations[2].latitude, data.fuel_stations[2].longitude],
-        [data.fuel_stations[3].latitude, data.fuel_stations[3].longitude],
-        [data.fuel_stations[4].latitude, data.fuel_stations[4].longitude]
-      ]
-      // display station info for map view
-      dataDisplay1(data.fuel_stations[0])
-      // display nearby locations
-      dataDisplay5(data.fuel_stations, 6)
-      // display station on map
-      latLon(data.latitude, data.longitude, planes)
-    });
-};
+  const response = await fetch(requestUrl);
+  const data = await response.json();
 
-//2. Display data with card buttons
+  try {
+    let planes = [
+      [data.fuel_stations[0].latitude, data.fuel_stations[0].longitude],
+      [data.fuel_stations[1].latitude, data.fuel_stations[1].longitude],
+      [data.fuel_stations[2].latitude, data.fuel_stations[2].longitude],
+      [data.fuel_stations[3].latitude, data.fuel_stations[3].longitude],
+      [data.fuel_stations[4].latitude, data.fuel_stations[4].longitude]
+    ]
+    // display station info for map view
+    dataDisplay1(data.fuel_stations[0])
+    // display nearby locations
+    dataDisplay5(data.fuel_stations, 6)
+    // display station on map
+    latLon(data.latitude, data.longitude, planes)
+  } catch (error) {
+    search.value = `INVALID CITY OR ZIPCODE`
+    search.setAttribute('style', 'color: red;')
+  }
+}
+
+// 2. Display data with card buttons
 // https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/get/
-function getApiByID(location) {
-  const requestUrl = ` https://developer.nrel.gov/api/alt-fuel-stations/v1/${location}.json?api_key=${apikey}`
+async function getApiByID(location) {
+  const requestUrl = ` https://developer.nrel.gov/api/alt-fuel-stations/v1/${location}.json?api_key=${apikey}`;
 
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      let planes = [[data.alt_fuel_station.latitude, data.alt_fuel_station.longitude]]
+  const response = await fetch(requestUrl);
+  const data = await response.json();
+  let planes = [[data.alt_fuel_station.latitude, data.alt_fuel_station.longitude]];
 
-      // display station info for map view
-      dataDisplay1(data.alt_fuel_station)
-      // display station on map
-      latLon(data.alt_fuel_station.latitude, data.alt_fuel_station.longitude, planes)
-    });
-};
+  // display station info for map view
+  dataDisplay1(data.alt_fuel_station);
+  // display station on map
+  latLon(data.alt_fuel_station.latitude, data.alt_fuel_station.longitude, planes);
+}
 
 //3. Display data with saved search buttons
 // https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/nearest/
-function getApiByZip(location) {
+async function getApiByZip(location) {
   const requestUrl = `https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=${location}&fuel_type_code='ELEC'&radius=5.0&api_key=${apikey}`
 
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      let planes = [
-        [data.fuel_stations[0].latitude, data.fuel_stations[0].longitude],
-        [data.fuel_stations[1].latitude, data.fuel_stations[1].longitude],
-        [data.fuel_stations[2].latitude, data.fuel_stations[2].longitude],
-        [data.fuel_stations[3].latitude, data.fuel_stations[3].longitude],
-        [data.fuel_stations[4].latitude, data.fuel_stations[4].longitude]
-      ];
-      // display nearby locations
-      dataDisplay5(data.fuel_stations, 6)
-      // display station on map
-      latLon(data.fuel_stations[1].latitude, data.fuel_stations[1].longitude, planes)
-    });
-};
+  const response = await fetch(requestUrl);
+  const data = await response.json();
+  let planes = [
+    [data.fuel_stations[0].latitude, data.fuel_stations[0].longitude],
+    [data.fuel_stations[1].latitude, data.fuel_stations[1].longitude],
+    [data.fuel_stations[2].latitude, data.fuel_stations[2].longitude],
+    [data.fuel_stations[3].latitude, data.fuel_stations[3].longitude],
+    [data.fuel_stations[4].latitude, data.fuel_stations[4].longitude]
+  ];
+
+  // display nearby locations
+  dataDisplay5(data.fuel_stations, 6)
+  // display station on map
+  latLon(data.fuel_stations[1].latitude, data.fuel_stations[1].longitude, planes)
+}
 
 // Create display for station-info on map_Section
 function dataDisplay1(arr) {
@@ -136,7 +124,7 @@ function displaySavedSearches() {
       getApiByZip(stationArr[i][2]);
     });
 
-       // create delete button
+    // create delete button
     const deleteBtn = document.createElement('div');
     deleteBtn.innerHTML = `<i id=${i} class="fa-solid fa-xmark x"></i>`;
     savedLocationsDiv.appendChild(deleteBtn);
