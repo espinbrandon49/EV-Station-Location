@@ -1,15 +1,11 @@
 const apikey = '2RWEmIH2pRUJZcqZ1v5HIAPtokWgcKHxrzrK8GK2';
 let stationArr = JSON.parse(localStorage.getItem('station')) || [];
 const search = document.getElementById('search');
-const searchButton = document.getElementById('searchButton');
-const mapDisplayCard = document.getElementById('mapDisplayCard');
-const savedLocations = document.getElementById('savedLocations');
-const mapDiv = document.getElementById('mapDiv');
 let map;
 
 getApi(94133);
 
-searchButton.addEventListener('click', (e) => {
+document.getElementById('searchButton').addEventListener('click', (e) => {
   e.preventDefault();
   getApi(search.value);
   search.value = '';
@@ -81,6 +77,7 @@ async function getApiByZip(location) {
 
 // Create display for station-info on map_Section
 function dataDisplay1(arr) {
+  const mapDisplayCard = document.getElementById('mapDisplayCard');
   mapDisplayCard.innerHTML = '';
   mapDisplayCard.innerHTML = `
       <p class="mapDisplay-card-item mapDisplay-card-name">
@@ -103,6 +100,7 @@ function dataDisplay1(arr) {
 
 //Create display for saved searches as buttons
 function displaySavedSearches() {
+  const savedLocations = document.getElementById('savedLocations');
   if (!localStorage.station) { return };
   savedLocations.innerHTML = '';
 
@@ -171,6 +169,7 @@ function dataDisplay5(arr, length) {
 
 // Create display for map of EV stations in the search region
 function latLon(lat, lon, arr) {
+  const mapDiv = document.getElementById('mapDiv');
   //replace current map with new search
   if (map != undefined) { map.remove(); }
 
@@ -202,8 +201,8 @@ function latLon(lat, lon, arr) {
 // Save searches in local storage
 function saveStation(content) {
   let newArr = []
-  stationArr.forEach(element => newArr.push(element[0]))
-  if (!newArr.includes(content[0])) {
+  stationArr.forEach(element => newArr.push(element[2]))
+  if (!newArr.includes(content[2])) {
     stationArr.push(content)
     let stations = JSON.stringify(stationArr)
     localStorage.setItem('station', stations)
@@ -212,7 +211,7 @@ function saveStation(content) {
 }
 
 const showClearTextButton = () => {
-  const clear = document.getElementById('clear')
+  const clear = document.getElementById('clear');
   if (search.value.length) {
     clear.classList.add('flex')
     clear.classList.remove('none');
@@ -220,4 +219,17 @@ const showClearTextButton = () => {
     clear.classList.add('none');
     clear.classList.remove('flex');
   }
-}; search.addEventListener('input', showClearTextButton);
+};
+search.addEventListener('input', showClearTextButton);
+
+const clearSearchText = (event) => {
+  const clear = document.getElementById('clear');
+  event.preventDefault()
+  document.getElementById("search").value = ''
+  clear.classList.add('none')
+  clear.classList.remove('flex')
+}
+document.getElementById('clear').addEventListener('click', clearSearchText);
+
+
+
