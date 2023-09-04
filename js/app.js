@@ -46,8 +46,8 @@ async function getApiByID(location) {
 
   const response = await fetch(requestUrl);
   const data = await response.json();
-  let planes = [[data.alt_fuel_station.latitude, data.alt_fuel_station.longitude]];
 
+  let planes = [[data.alt_fuel_station.latitude, data.alt_fuel_station.longitude]];
   // display station info for map view
   dataDisplay1(data.alt_fuel_station);
   // display station on map
@@ -61,6 +61,7 @@ async function getApiByZip(location) {
 
   const response = await fetch(requestUrl);
   const data = await response.json();
+
   let planes = [
     [data.fuel_stations[0].latitude, data.fuel_stations[0].longitude],
     [data.fuel_stations[1].latitude, data.fuel_stations[1].longitude],
@@ -68,7 +69,6 @@ async function getApiByZip(location) {
     [data.fuel_stations[3].latitude, data.fuel_stations[3].longitude],
     [data.fuel_stations[4].latitude, data.fuel_stations[4].longitude]
   ];
-
   // display nearby locations
   dataDisplay5(data.fuel_stations, 6)
   // display station on map
@@ -225,7 +225,7 @@ search.addEventListener('input', showClearTextButton);
 const clearSearchText = (event) => {
   const clear = document.getElementById('clear');
   event.preventDefault()
-  document.getElementById("search").value = ''
+  search.value = ''
   clear.classList.add('none')
   clear.classList.remove('flex')
 }
